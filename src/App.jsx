@@ -4,6 +4,7 @@ import Home from "./views/Home";
 import About from "./views/About";
 // import { Home, About } from "./views/index";
 import "./App.css";
+import "./server";
 
 function App() {
   return (
