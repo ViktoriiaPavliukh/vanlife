@@ -6,6 +6,7 @@ import Vans from "./views/Vans";
 // import { Home, About } from "./views/index";
 import "./App.css";
 import "./server";
+import VanDetail from "./views/VanDetail";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/vans" element={<Vans />} />
+        <Route path="/vans/:id" element={<VanDetail />} />
       </Routes>
     </BrowserRouter>
   );
