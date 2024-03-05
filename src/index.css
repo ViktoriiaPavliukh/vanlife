@@ -184,6 +184,15 @@ footer {
   padding-inline: 23px;
 }
 
+.van-list-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.van-list-filter-buttons > a {
+  margin-right: 15px;
+}
+
 .van-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -317,6 +326,7 @@ i[class*="van-type-"] {
 
 .host-nav {
   display: flex;
+  margin-bottom: 30px;
 }
 
 .host-nav a {
