@@ -22,6 +22,7 @@ import HostVanPhotos from "./views/Host/HostVanPhotos";
 import HostVanPricing from "./views/Host/HostVanPricing";
 import HostVanInfo from "./views/Host/HostVanInfo";
 import NotFound from "./views/NotFound";
+import Login from "./views/Login";
 import Error from "./compoments/Error";
 
 const router = createBrowserRouter(
@@ -29,6 +30,7 @@ const router = createBrowserRouter(
     <Route element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
+      <Route path="login" element={<Login />} />
       <Route
         path="vans"
         element={<Vans />}

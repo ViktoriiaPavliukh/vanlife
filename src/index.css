@@ -15,21 +15,31 @@ body::-webkit-scrollbar {
 }
 
 body {
+  margin: 0 auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
 .site-wrapper {
+  margin: 0 auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 header {
-  height: 110px;
   display: flex;
+  justify-content: center;
   align-items: center;
   padding-block: 10px;
+}
+
+.header-items {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
 }
 
 header .site-logo {
@@ -50,6 +60,18 @@ header a {
 header a:hover {
   color: #161616;
   text-decoration: underline;
+  text-decoration-color: #ff8c38;
+}
+
+header .site-logo:hover {
+  text-decoration: none;
+  color: #ff8c38;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
@@ -467,4 +489,74 @@ i[class*="van-type-"] {
   width: 100%;
   background-color: #161616;
   color: white;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 27px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+}
+
+.login-form > input {
+  border: 1px solid rgba(209, 213, 219);
+  height: 40px;
+  text-indent: 10px;
+  font-family: "Inter", sans-serif;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  font-weight: 400;
+}
+
+.login-form > input:focus {
+  outline: none;
+}
+
+.login-form > input:first-of-type {
+  border-radius: 6px 6px 0px 0px;
+}
+
+.login-form > input:last-of-type {
+  border-radius: 0px 0px 6px 6px;
+  border-top: none;
+}
+
+.login-form > button {
+  background-color: #ff8c38;
+  border: none;
+  border-radius: 6px;
+  height: 55px;
+  margin-top: 22px;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+.login-link {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  padding: 0.75rem 1.375rem;
+  color: initial;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+.login-icon {
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-icon:hover {
+  background-color: #ff8c38;
+  transform: scale(1.1);
 }
