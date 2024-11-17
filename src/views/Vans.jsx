@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLoaderData, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams, useLoaderData } from "react-router-dom";
 import { getVans } from "../api";
 
 export function loader() {

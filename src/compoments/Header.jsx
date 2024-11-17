@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
+import LoginIcon from "@mui/icons-material/Login";
 
 export default function Header() {
   const activeStyle = {
@@ -39,11 +40,7 @@ export default function Header() {
             Vans
           </NavLink>
           <Link to="login" className="login-link">
-            <img
-              src="src/assets/icons/log-in.svg"
-              className="login-icon"
-              alt="login"
-            />
+            <LoginIcon />
           </Link>
         </nav>
       </div>
