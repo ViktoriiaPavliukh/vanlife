@@ -560,3 +560,6 @@ i[class*="van-type-"] {
   background-color: #ff8c38;
   transform: scale(1.1);
 }
+.red {
+  color: #cc0000;
+}
