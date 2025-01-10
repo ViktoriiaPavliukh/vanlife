@@ -3,13 +3,19 @@ import { Link, useLoaderData } from "react-router-dom";
 import { getHostVans } from "../../api";
 import { requireAuth } from "../../utils";
 
-export async function loader() {
-  await requireAuth();
-  return getHostVans();
+export async function loader({ request }) {
+  await requireAuth(request);
+
+  const vans = await getHostVans();
+  return vans || []; // Ensure it returns an array or null
 }
 
 export default function HostVans() {
   const vans = useLoaderData();
+
+  if (!vans || vans.length === 0) {
+    return <h2>No vans listed yet. Add your first van to get started!</h2>;
+  }
 
   const hostVansEls = vans.map((van) => (
     <Link to={van.id} key={van.id} className="host-van-link-wrapper">
